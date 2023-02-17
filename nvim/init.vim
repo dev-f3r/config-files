@@ -56,7 +56,9 @@ call plug#begin('~/.vim/plugged')
   " DELIMITERS AUTOCOMPLETION
   Plug 'Raimondi/delimitMate'
 
-  " LSP ULTISIPNS
+  " BETTER COMMENTS
+  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  "LSP ULTISIPNS
   "Plug 'thomasfaingnaert/vim-lsp-snippets'
   "Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 
@@ -87,6 +89,7 @@ colorscheme tokyonight-night
 " ----------
 lua << EOF
   require'lspconfig'.tsserver.setup{}
+  require'lspconfig'.cssmodules_ls.setup{}
 EOF
 
 
@@ -139,6 +142,12 @@ nnoremap <C-f> :NERDTreeFind<CR>
 "
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
+
+
+" BETTER COMMENTS CONFIG
+
+
+
 
 " COC CONFIG
 " -----------
